@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grêmio Estudantil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header, nav, section, footer {
+            width: 100%;
+            text-align: center;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        section {
+            flex: 1;
+            margin-bottom: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"],
+        textarea,
+        input[type="email"],
+        select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        select {
+            width: auto;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a style="margin-left: 0; color: white; text-decoration:none;" href="index.html">Grêmio Estudantil</a></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="sobrenospage.html">Sobre Nós</a></li>
+            <li><a href="pagina-de-denuncia.html">Denúncias</a></li>
+            <li><a href="agendadeeventos.html">Agenda de Eventos</a></li>
+            <li><a href="sugestoes.html">Sugestões</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Denúncias</h2>
+        <p>Uma página onde poderão ser enviadas denúncias e os e-mails serão enviados diretamente ao diretor.</p>
+
+        <h3>Motivo da denúncia:</h3>
+        <select>
+            <option value="bullying">Bullying</option>
+            <option value="agressao">Agressão</option>
+            <option value="furto">Furto</option>
+            <option value="outros">Outros (especifique abaixo).</option>
+        </select>
+
+        <form class="denuncia-form" action="enviar_email.php" method="post">
+            <input style="width: 65vh" type="text" name="nome_aluno" placeholder="Nome do aluno">
+            <textarea style="width: 65vh; margin-bottom: 10px" name="reclamacao" placeholder="Reclamação" style="height: 150px;"></textarea>
+            <input style="width: 65vh; margin-bottom: 10px"type="email" name="email_diretor" readonly placeholder="eduart.macena@etec.sp.gov.br">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Grêmio Estudantil. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
